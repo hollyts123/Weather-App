@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather app</title>
+    <meta charset="UTF-8" />
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="frame">
+      <form class="search-bar">
+        <input
+          type="text"
+          class="search"
+          id="search-input"
+          placeholder="Search"
+          autofocus
+        />
+        <input type="submit" class="search-btn" value="🔍" />
+      </form>
+      <div class="main-content">
+        <!-- <div class="temp">
+          <span id="celsius">°C</span>
+          /
+          <span id="fahrenheit">°F</span>
+        </div> -->
+        <div class="text">
+          <h1>
+            <span class="city">City</span> <br /><span class="degree">°C</span>
+          </h1>
+          <p>Saturday, 28th May 2022</p>
+        </div>
+        <div class="icon">⛅</div>
+      </div>
+      <div class="next-days">
+        <div class="day">
+          <span class="one">Sunday</span>
+          <div class="day-frame one">
+            <p>29th<br />☀</p>
+          </div>
+        </div>
+        <div class="day">
+          <span class="two">Monday</span>
+          <div class="day-frame two">
+            <p>30th<br />🌨</p>
+          </div>
+        </div>
+        <div class="day">
+          <span class="three">Tuesday</span>
+          <div class="day-frame three">
+            <p>31st<br />🌤</p>
+          </div>
+        </div>
+        <div class="day">
+          <span class="four">Wednesday</span>
+          <div class="day-frame four">
+            <p>1st<br />🌨</p>
+          </div>
+        </div>
+        <div class="day">
+          <span class="five">Thursday</span>
+          <div class="day-frame five">
+            <p>2nd<br />☀</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
