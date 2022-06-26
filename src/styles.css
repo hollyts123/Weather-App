@@ -3,7 +3,7 @@
   border: 3px solid purple;
   border-radius: 10px;
   padding: 30px 40px 100px 40px;
-  margin: 100px auto;
+  margin: 100px auto 50px auto;
 }
 
 .search-bar {
@@ -126,3 +126,31 @@ p {
 .five {
   margin: 0 0 0 15%;
 }
+
+.github {
+  display: block;
+  margin: 0 auto;
+  margin-top: 0;
+  background-color: purple;
+  font-weight: 600;
+  border: 1px solid purple;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 50px;
+  color: #fff;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.github:hover {
+  background-color: #fff;
+  color: purple;
+  border: 3px solid purple;
+  transition: all 200ms ease-in-out;
+  
+}
+
