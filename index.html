@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Weather app</title>
-    <meta charset="UTF-8" />
-    <link href="src/styles.css" rel="stylesheet" type="text/css" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  </head>
 
-  <body>
-    <div class="frame">
-      <form class="search-bar">
-        <input
-          type="text"
-          class="search"
-          id="search-input"
-          placeholder="Search"
-          autofocus
-        />
-        <input type="submit" class="search-btn" value="🔍" />
-      </form>
-      <div class="main-content">
-        <!-- <div class="temp">
-          <span id="celsius">°C</span>
-          /
-          <span id="fahrenheit">°F</span>
-        </div> -->
-        <div class="text">
-          <h1>
-            <span class="city">City</span> <br /><span class="degree">°C</span>
-          </h1>
-          <p>Saturday, 28th May 2022</p>
-        </div>
-        <div class="icon">⛅</div>
+<head>
+  <title>Weather app</title>
+  <meta charset="UTF-8" />
+  <link href="src/styles.css" rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div class="frame">
+    <form class="search-bar">
+      <input type="text" class="search" id="search-input" placeholder="Search" autofocus />
+      <input type="submit" class="search-btn" value="🔍" />
+    </form>
+    <div class="main-content">
+      <!-- Adding temperature conversion -->
+      <div class="temp">
+        <span id="celsius">°C</span>
+        /
+        <span id="fahrenheit">°F</span>
       </div>
-      <div class="next-days">
-        <div class="day">
-          <span class="one">Sunday</span>
-          <div class="day-frame one">
-            <p>29th<br />☀</p>
-          </div>
+      <!-- Displaying weather info -->
+      <div class="text">
+        <h1>
+          <span class="city" id=" city">Nikopol</span> <br /><span id="temperature"></span><span
+            class="degree"></span><br>
+        </h1>
+        <p>Saturday, 28th May 2022</p>
+        <p id="description"></p>
+      </div>
+      <div class="text">
+        <ul>
+          <li id="humidity">Humidity:</li>
+          <li id="wind">Wind:</li>
+        </ul>
+      </div>
+      <div class="icon">⛅</div>
+    </div>
+
+    <!-- Weather forecast -->
+    <div class="next-days">
+      <div class="day">
+        <span class="one">Sunday</span>
+        <div class="day-frame one">
+          <p>29th<br />☀</p>
         </div>
-        <div class="day">
-          <span class="two">Monday</span>
-          <div class="day-frame two">
-            <p>30th<br />🌨</p>
-          </div>
+      </div>
+      <div class="day">
+        <span class="two">Monday</span>
+        <div class="day-frame two">
+          <p>30th<br />🌨</p>
         </div>
-        <div class="day">
-          <span class="three">Tuesday</span>
-          <div class="day-frame three">
-            <p>31st<br />🌤</p>
-          </div>
+      </div>
+      <div class="day">
+        <span class="three">Tuesday</span>
+        <div class="day-frame three">
+          <p>31st<br />🌤</p>
         </div>
-        <div class="day">
-          <span class="four">Wednesday</span>
-          <div class="day-frame four">
-            <p>1st<br />🌨</p>
-          </div>
+      </div>
+      <div class="day">
+        <span class="four">Wednesday</span>
+        <div class="day-frame four">
+          <p>1st<br />🌨</p>
         </div>
-        <div class="day">
-          <span class="five">Thursday</span>
-          <div class="day-frame five">
-            <p>2nd<br />☀</p>
-          </div>
+      </div>
+      <div class="day">
+        <span class="five">Thursday</span>
+        <div class="day-frame five">
+          <p>2nd<br />☀</p>
         </div>
       </div>
     </div>
-    <a href="https://github.com/hollyts123/Weather-App" target="_blank"><button class="github">Go to Github</button></a>
-    <script src="src/index.js"></script>
-  </body>
+  </div>
+  <a href="https://github.com/hollyts123/Weather-App" target="_blank"><button class="github">Go to Github</button></a>
+  <script src="src/index.js"></script>
+</body>
+
 </html>
