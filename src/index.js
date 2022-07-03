@@ -22,8 +22,9 @@ p.innerHTML = `${currentDay} ${currentHours}:${currentMinutes}`;
 
 // Displaying the weather for a default city
 function displayDefaultTemperature(response) {
+  celsiusTemp = response.data.main.temp;
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}°C`;
+  temperatureElement.innerHTML = `${Math.round(celsiusTemp)}°C`;
   let description = document.querySelector("#description");
   description.innerHTML = `${response.data.weather[0].description}`;
   let humidity = document.querySelector("#humidity");
@@ -40,14 +41,16 @@ let apiKey = "b533bb31ab6b7d26400f4e2f73516e81";
 let defaultCityApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Nikopol&appid=${apiKey}&units=metric`;
 axios.get(defaultCityApiUrl).then(displayDefaultTemperature);
 
-// Searching for a city and displaying the weather
+// Searching for a city and displaying the weather for it
 
 function showWeather(response) {
   let city = document.querySelector(".city");
   let searchInput = document.querySelector("#search-input");
   city.innerHTML = `${searchInput.value}`;
 
-  let temp = response.data.main.temp;
+  celsiusTemp = response.data.main.temp;
+
+  let temp = celsiusTemp;
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = `${Math.round(temp)}°C`;
   let weatherDescription = document.querySelector("#description");
@@ -69,20 +72,26 @@ function searchCity(event) {
   axios.get(apiUrl).then(showWeather);
 }
 
+let celsiusTemp = null;
+
 let search = document.querySelector(".search-bar");
 search.addEventListener("submit", searchCity);
 
 // Converting temperature
-function convertToCelsius(event) {
-  event.preventDefault();
-  let degree = document.querySelector(".degree");
-  degree.innerHTML = "";
-}
+
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let degree = document.querySelector(".degree");
-  degree.innerHTML = "";
+  let temperatureElement = document.querySelector("#temperature");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temperatureElement.innerHTML = `${Math.round(fahrenheitTemp)}°F`;
 }
+
+function convertToCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = `${Math.round(celsiusTemp)}°C`;
+}
+
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", convertToFahrenheit);
 
