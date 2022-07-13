@@ -2,7 +2,7 @@
   width: 50%;
   border: 3px solid purple;
   border-radius: 10px;
-  padding: 30px 40px 100px 40px;
+  padding: 30px 40px 50px 40px;
   margin: 100px auto 50px auto;
 }
 
@@ -109,7 +109,7 @@ li {
   margin: 40px 0 60px 0;
 }
 
-.day {
+/* .day {
   width: 20%;
   float: left;
   text-align: center;
@@ -147,7 +147,7 @@ li {
 
 .five {
   margin: 0 0 0 15%;
-}
+} */
 
 .github {
   display: block;
